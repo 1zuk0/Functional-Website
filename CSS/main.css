@@ -1,0 +1,34 @@
+@font_face {
+	font-family: Russo One;
+	src: url(FONTS/Russo One.ttf);
+}
+
+h1 {
+	font-family: Russo One;
+	font-size: 50px;
+	text-align: center;
+}
+
+h2 {
+	font-family: Russo One;
+	font-size: 30px;
+	text-align: center;
+}
+
+.table {
+	margin-left: auto;
+  	margin-right: auto;
+}
+
+.description {
+	margin: auto;
+	margin-top: 10px;
+	width: 50%;
+	height: 50px;
+	float: middle;
+}
+
+div {
+	border: 7px solid;
+	color: silver;
+}
