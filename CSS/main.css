@@ -32,6 +32,8 @@ div {
 	border: 7px solid;
 	color: silver;
 }
-td a{
+td a:hover {
 	text-decoration: none;
+	background-color: silver;
 }
+
