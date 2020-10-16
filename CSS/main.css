@@ -32,3 +32,6 @@ div {
 	border: 7px solid;
 	color: silver;
 }
+td a{
+	text-decoration: none;
+}
