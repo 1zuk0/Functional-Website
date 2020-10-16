@@ -37,3 +37,9 @@ td a:hover {
 	background-color: silver;
 }
 
+.link:hover {
+	text-decoration: none;
+	background-color: silver;
+}
+
+
