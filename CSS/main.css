@@ -28,18 +28,43 @@ h2 {
 	float: middle;
 }
 
-div {
-	border: 7px solid;
-	color: silver;
 }
 td a:hover {
 	text-decoration: none;
 	background-color: silver;
 }
 
-.link:hover {
+.Nav a {
+	float: center;
+	color: silver;
+	text-align: center;
+	padding: 10px 25px;
 	text-decoration: none;
-	background-color: silver;
+	font-size: 20px;
+	font-family: Russo One;
 }
+
+.Nav {
+	overflow: hidden;
+}
+
+.Nav a:hover {
+	background-color: black;
+	color: silver;
+}
+
+.Nav a.active {
+	background-color: grey;
+	color: silver;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+
 
 
