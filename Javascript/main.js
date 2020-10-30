@@ -3,6 +3,8 @@ function assignmentOne() {
   alert("Code is incorrect. indentification invalid. Your access to Assignment 1 is denied.")
 }
 
+// Alerts were used to pop up messages on your screen while prompts ask you a question
+
 function assignmentTwo() {
   alert ('The second assignment will be coming soon!')
 }

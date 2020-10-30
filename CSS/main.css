@@ -3,11 +3,15 @@
 	src: url(FONTS/Russo One.ttf);
 }
 
+/*Font used for most of the text was Russo One*/
+
 h1 {
 	font-family: Russo One;
 	font-size: 50px;
 	text-align: center;
 }
+
+/*Size used for the titles*/
 
 h2 {
 	font-family: Russo One;
@@ -15,24 +19,7 @@ h2 {
 	text-align: center;
 }
 
-.table {
-	margin-left: auto;
-  	margin-right: auto;
-}
-
-.description {
-	margin: auto;
-	margin-top: 10px;
-	width: 50%;
-	height: 50px;
-	float: middle;
-}
-
-
-td a:hover {
-	text-decoration: none;
-	background-color: silver;
-}
+/*Size used for the secondary titles*/
 
 .Nav a {
 	float: center;
@@ -44,19 +31,27 @@ td a:hover {
 	font-family: Russo One;
 }
 
+/*Styles used for the nav bar to make it look nicer*/
+
 .Nav {
 	overflow: hidden;
 }
+
+/*Hides the overflow*/
 
 .Nav a:hover {
 	background-color: black;
 	color: silver;
 }
 
+/*For the nav bar. Whenever you hover over a link, the background turns black and the color turns silver*/
+
 .Nav a.active {
 	background-color: grey;
 	color: silver;
 }
+
+/*This code is used to show which webpage your on. So if your on the Assignments webpage, the website link on the navbar will show that you are on the Assignments page.*/
 
 .center {
   display: block;
@@ -64,6 +59,8 @@ td a:hover {
   margin-right: auto;
   width: 50%;
 }
+
+/*Used to center text and pictures*/
 
 .button {
   border: none;
@@ -82,12 +79,15 @@ td a:hover {
   background-color: silver;
 }
 
+/*Style used for the buttons to make them look nicer*/
+
 .button:hover {
 	text-decoration: none;
 	background-color: darkblue;
 	color: silver;
 }
 
+/*Style used for when your cursor is hovering over the button*/
 
 
 
