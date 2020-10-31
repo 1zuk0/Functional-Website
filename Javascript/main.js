@@ -11,12 +11,12 @@ function assignmentTwo() {
 
 
 function assignmentThree() {
-  alert ('The third assignment is on it/s way!')
+  alert ('The third assignment is on it\'s way!')
 }
 
 
 function assignmentFour() {
-  alert ('The fourth assignment is also on it/s way!')
+  alert ('The fourth assignment is also on it\'s way!')
 }
 
 
@@ -38,7 +38,7 @@ function assignmentSeven() {
 
 function assignmentEight() {
  prompt('Do you have the verification code?')
- alert ("So you don't. I see..... You'd better scram ya punk")
+ alert ("So you don\'t. I see..... You'd better scram ya punk")
 }
 
 
