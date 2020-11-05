@@ -179,6 +179,54 @@ alert (sum);
 
 
 
+function tenFour() {
+let sum = 0;
+let x = 0;
+let fourAndTenCountMultiple = 0
+
+	while (x < 100) {
+		sum =+ x;
+	x = x + 1;
+	if (x % 4 === 0 && x % 10 === 0) {
+		fourAndTenCountMultiple += ( ('(') + x + (')') + " is a multiple of TenFour! ");
+	}
+	else if (x % 4 === 0) {
+		fourAndTenCountMultiple += ( ('(') + x + (')') + " is a multiple of Four ");
+	}
+
+	else if (x % 10 === 0) {
+		fourAndTenCountMultiple += ( ('(') + x + (')') + " is a multiple of Ten ");
+	}
+	else 
+		fourAndTenCountMultiple += ( " | "+ x + " | ");
+	}
+	alert(fourAndTenCountMultiple);
+}
+
+
+function tenFour1() {
+let sum = 0;
+let x = 0;
+let fourAndTenCountMultiple = 0
+
+	while (x < 100) {
+		sum =+ x;
+	x = x + 1;
+	if (x % 4 === 0 && x % 10 === 0) {
+		fourAndTenCountMultiple += ("TenFour");
+	}
+	else if (x % 4 === 0) {
+		fourAndTenCountMultiple += ("Four");
+	}
+
+	else if (x % 10 === 0) {
+		fourAndTenCountMultiple += ("Ten");
+	}
+	else 
+		fourAndTenCountMultiple += ( " | "+ x + " | ");
+	}
+	alert(fourAndTenCountMultiple);
+}
 
 
 
