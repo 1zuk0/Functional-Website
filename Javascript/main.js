@@ -237,6 +237,30 @@ let fourAndTenCountMultiple = 0
 
 
 
+
+
+
+
+function centuryFromYear() {
+
+let year = window.prompt('Input the year');
+
+century = Math.floor(year/100) + 1;
+
+alert('The century of the year ' + year + ' is the ' + century + ' century');
+
+}
+
+// In this function, I use two variables, year and century. The user inputs year. The function takes the year, divides 
+// it by 100, then adds 1 to it and floors it to get the century of the year. For example, if you input the year 1897. 
+// the function will take 1897, divide it by 100 (18.97) it will then add 1 (19.97) and then math.floor it (19) to get
+// a whole number. Then, the function will return an alert, telling you what century it is.
+// The century of the year 1897 is the 19 century.
+
+
+
+
+
 function thirdAngle() {
 let angle1, angle2;
 
