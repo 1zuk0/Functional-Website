@@ -1,10 +1,12 @@
 function assignmentOne() {
-  let name = prompt("Do you have proper indentification? State the verification code below")
-  if(name = 'swiftblade') {
+ let password 
+
+ password = window.prompt("Do you have proper indentification? State the verification code below")
+  if (password === 'swiftblade') {
   	alert ('Welcome master. I have been waiting for you.');
   }
   else {
-  	alert("Code is incorrect. indentification invalid. Your access to Assignment 1 is denied.")
+  	alert ("Code is incorrect. indentification invalid. Your access to Assignment 1 is denied.");
   }
 }
 
@@ -180,12 +182,10 @@ alert (sum);
 
 
 function tenFour() {
-let sum = 0;
 let x = 0;
 let fourAndTenCountMultiple = 0
 
 	while (x < 100) {
-		sum =+ x;
 	x = x + 1;
 	if (x % 4 === 0 && x % 10 === 0) {
 		fourAndTenCountMultiple += ( ('(') + x + (')') + " is a multiple of TenFour! ");
@@ -203,14 +203,19 @@ let fourAndTenCountMultiple = 0
 	alert(fourAndTenCountMultiple);
 }
 
+// This function uses the x variable to count through integers 1 to 100. It uses a loop to do this. THis loop
+// stops working when x is bigger than 100. I use a while loops because a for loop would check for the conditional
+// statement first. The while loop runs the function then checks if the conditional statement is true. So I am 
+// able to check if 100 is a multiple of 4 and 10 which it is. Anyways, back to the main topic, the if and the 
+// if else statements check if x is equal to a multiple of 4 and 10, 4, and 10. If they evaluate to be true, then the 
+// loop will return a string TenFour, Four, or Ten, depending on which number it is a multiple of. If the number is not 
+// a multiple of either, then it will return as a normal number.  
 
 function tenFour1() {
-let sum = 0;
 let x = 0;
 let fourAndTenCountMultiple = 0
 
 	while (x < 100) {
-		sum =+ x;
 	x = x + 1;
 	if (x % 4 === 0 && x % 10 === 0) {
 		fourAndTenCountMultiple += ("TenFour");
@@ -228,6 +233,7 @@ let fourAndTenCountMultiple = 0
 	alert(fourAndTenCountMultiple);
 }
 
+// Same as the last function, just returns different statements. 
 
 
 
