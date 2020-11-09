@@ -241,6 +241,9 @@ let fourAndTenCountMultiple = 0
 
 
 
+
+
+
 function centuryFromYear() {
 
 let year = window.prompt('Input the year');
