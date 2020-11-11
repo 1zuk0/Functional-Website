@@ -293,6 +293,179 @@ else {
 
 
 
+function izukoEncryption () {
+	let originalMessage = window.prompt("Input the message you would like to be encrypted.");
+    let encryptMessage = "";
+    let firstLetter = "";
+    let secondLetter = "";
+
+// Here, I have the variables I will be using to encrypt a message. The user inputs originalMessage through a prompt.
+// The rest of the variables are to be decided...
+
+originalMessage = originalMessage.split(" ");
+
+// I split the originalMessage that the user inputted so I can seperate them into elements (words) 
+// For example. The message (I like hot dogs) Will be seperated into I, like, hot, dogs. Into seperate elements.
+
+	for ( let i = 0; i < originalMessage.length; i = i + 1) {
+
+// This loop goes through each word and encrypts it.
+
+	if (originalMessage[i].length > 2) {
+
+// This if statement checks if the word has more than two letter. If it does, it will perform the following:
+
+		firstLetter = originalMessage[i][0];
+
+// Take the first letter of the word, and save it to variable firstLetter 
+
+		secondLetter = originalMessage[i][1];
+
+// Take the second letter of the word, and save it to variable secondLetter 
+
+		encryptMessage += (originalMessage[i]).slice(2);
+
+// Takes the word, and removes the first two letters, saving the remaing letters to encryptMessage.
+// Eg. Noodles would become odles
+
+		encryptMessage += firstLetter + "oG" + secondLetter + " ";
+
+// Then, we will add to encrypt message, the first letter, the letters oG, and then the second letter.
+// All together it looks like this: Hello = lloHoGe
+
+	}
+
+// These else if statements are pretty similar. If the word is === to a, i, A, or I, it will turn it into a code.
+// Because a and i are the only one letter words in the english language, I wanted to put a special code for each 
+// of them. 
+
+	else if (originalMessage[i] === "a") {
+    	encryptMessage += '0n6kd8f '
+    }
+    else if (originalMessage[i] === "i") {
+    	encryptMessage += '1n6kd8f '
+    }
+
+    else if (originalMessage[i] === "A") {
+    	encryptMessage += '2n6kd8f '
+    }
+    else if (originalMessage[i] === "I") {
+    	encryptMessage += '3n6kd8f '
+    }
+
+	else {
+
+// This else function is for the words that are two letters long. It takes the first letter, adds the code "3Xy5r",
+// And then adds the second letter. For examples: my = m3Xy5ry
+
+		encryptMessage += (originalMessage[i][0]) + "3Xy5r" + (originalMessage[i][1]) + " ";
+	}
+}
+	alert ("Your message: " + originalMessage + " translates to the encrypted message: " + encryptMessage);
+
+// Alert returns the message you entered, and the ecncrypted form of your message.
+
+}
+
+
+
+
+
+function izukoDecryption () {
+	let encryptedMessage = window.prompt("Input the message you would like to be encrypted.");
+    let decryptedMessage = "";
+    let lastPart = "";
+    let getFirstTwoLetters = "";
+
+// I declare the variables i'll be using in this function here. encryptedMessage is a prompt that the user inputs. The 
+// rest are to be decided...
+
+    encryptedMessage = encryptedMessage.split(" ");
+	
+// I split the encryptedMessage that the user inputted so I can seperate them into elements (words) 
+// For example. The message (3n6kd8f keloGi thoGo gsdoGo) Will be seperated into 
+// 3n6kd8f, keloGi, thoGo, gsdoGo . Into seperate elements. 
+
+    for ( let i = 0; i < encryptedMessage.length; i = i + 1) {
+
+// This loop goes through each word and decrypts it
+
+	encryptedMessage[i] = encryptedMessage[i].replace(/3Xy5r/g, ""); 
+	encryptedMessage[i] = encryptedMessage[i].replace(/oG/g, ""); 
+
+// Everytime the loop goes through an iteration, it first removes the codewords from the elements to help with the
+// decryption. For example: lloHoGe turns into lloHe (oG was removed per the above code) [Hello = lloHoGe]
+
+    if (encryptedMessage[i] === "0n6kd8f") {
+    	
+    	decryptedMessage += 'a '
+    }
+    else if (encryptedMessage[i] === "1n6kd8f") {
+    	
+    	decryptedMessage += 'i '
+    }
+
+    else if (encryptedMessage[i] === "2n6kd8f") {
+    	
+    	decryptedMessage += 'A '
+    }
+    else if (encryptedMessage[i] === "3n6kd8f") {
+    	
+    	decryptedMessage += 'I '
+    }
+
+// These else if statements are very similar. They both check for the codes above. Each code above represents a one 
+// letter word. For example, if the user inputted 1n6kd8f, the else if statement would check for that value and 
+// if it was a match, it would return the word i. ( 1n6kd8f = i )
+
+    else if (encryptedMessage[i].length > 2) {
+
+    	// This else if function is for the words that are longer than two letters. 
+    	
+    		getFirstTwoLetters = encryptedMessage[i].slice(-2);
+
+    		// First, I take the last two letters and save them to the variable: getFirstTwoLetters
+
+    		lastPart = encryptedMessage[i].slice(0, -2);
+
+    		// Then, I slice the encrypted message by removing the last two letters and saving the rest to variable: 
+    		// lastPart.
+  
+    		decryptedMessage += getFirstTwoLetters + lastPart + " ";
+
+    		// Then, this adds it all together. 
+    		// Eg. lloHe turns into decrypted message += He(getFirstTwoLetters) + llo(lastPart) = Hello
+
+    	} 
+
+    else if (encryptedMessage[i].length <= 2){
+
+    	// This is for the two letter words. Since at the beginning we remove the 3Xy5r code from each two letter word,
+    	// We are just left with the two letter words. Eg. a3Xy5rm is the word at the beginning. When the loop goes through it,
+    	// It will remove the 3Xy5r code first so we are left with am. This else if function just adds the word am to the 
+    	// decryptedMessage. 
+   
+		decryptedMessage += encryptedMessage[i] + " ";
+
+	}
+    }
+    alert ("Your encrypted message: (" + encryptedMessage + ") means: " + decryptedMessage);
+
+// Alert returns the encrypted message you entered, and the decrypted form of your message.
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
